@@ -11,12 +11,14 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
   s.source       = { 
-                     :git => "https://github.com/SecretLisa/AgoraRtcEngineKit", 
+                     :git => "https://github.com/SecretLisa/AgoraRtcEngineKit.git", 
                      :tag => s.version 
   }
 
-  s.vendored_frameworks = 'AgoraRtcEngineKit.framework'
+  s.vendored_libraries = '*.a'
+  s.vendored_frameworks = '*.framework'
   s.license = 'MIT'
-  s.public_header_files = "AgoraRtcEngineKit.framework/Headers/*.h"
-
+  s.framework = 'AVFoundation', 'AudioToolbox', 'VideoToolbox', 'CoreMotion', 'CoreMedia', 'CoreTelephony'
+  s.libraries = 'c++', 'resolv'
+  
 end
