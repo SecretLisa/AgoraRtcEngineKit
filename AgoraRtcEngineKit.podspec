@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.vendored_libraries = '*.a'
   s.vendored_frameworks = '*.framework'
   s.license = 'MIT'
-  s.public_header_files = "AgoraRtcEngineKit.framework/Headers/*.h"
+  s.public_header_files = "AgoraRtcEngineKit.framework/Headers/*.h", "AgoraRtcCryptoLoader.framework/Headers/*.h"
   s.framework = 'AVFoundation', 'AudioToolbox', 'VideoToolbox', 'CoreMotion', 'CoreMedia', 'CoreTelephony'
   s.library = 'libc++', 'libresolv'
   
